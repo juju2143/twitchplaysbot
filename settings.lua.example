@@ -1,0 +1,9 @@
+-- Rename this file to settings.lua so it works
+
+irc.settings = {}
+irc.settings.host = "irc.twitch.tv" -- for the Twitch chat, you can connect to normal IRC if you want by putting a normal IRC server in, you know what to do in that case
+irc.settings.port = 6667
+irc.settings.nickname = "juju2143" -- your Twitch.tv username
+irc.settings.channel = "#juju2143" -- your Twitch channel with a # in front of it, e.g. http://twitch.tv/juju2143 becomes #juju2143
+irc.settings.password = "" -- Paste the oauth: password you got from http://twitchapps.com/tmi/ if you're gonna connect to Twitch or nothing or the server password if you're going to connect to something else
+
