@@ -56,6 +56,7 @@ function read()
 		buffer, err = connection:receive("*l")
 		if err == nil or err == "timeout" then
 			if not connected then
+				socket.sleep(1)
 				if password ~= nil and password ~= "" then
 					send("PASS "..password)
 				end
@@ -63,6 +64,8 @@ function read()
 				send("USER "..nickname.." 0 * :TwitchPlaysBot by juju2143 http://github.com/juju2143/twitchplaysbot")
 				connected = true
 			end
+		else
+			emu.print(buffer)
 		end
 		if buffer ~= nil then
 			emu.print(buffer)
